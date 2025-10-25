@@ -4,6 +4,8 @@
   callPackage,
   ipu6ep-camera-hal,
   ipu6epmtl-camera-hal,
+  ipu7x-camera-hal,
+  ipu75xa-camera-hal,
   apple-sdk_13,
 }:
 
@@ -43,6 +45,12 @@ in
   };
   icamerasrc-ipu6epmtl = callPackage ./icamerasrc {
     ipu6-camera-hal = ipu6epmtl-camera-hal;
+  };
+  icamerasrc-ipu7x = callPackage ./icamerasrc {
+    ipu6-camera-hal = ipu7x-camera-hal;
+  };
+  icamerasrc-ipu75xa = callPackage ./icamerasrc {
+    ipu6-camera-hal = ipu75xa-camera-hal;
   };
 
   # note: gst-python is in ../../python-modules/gst-python - called under python3Packages
